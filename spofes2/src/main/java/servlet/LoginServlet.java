@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//import model.dao.LoginDAO;
-//import model.entity.SpoFesBean;
-
 /**
  * Servlet implementation class LoginServlet
  */
@@ -100,8 +97,6 @@ public class LoginServlet extends HttpServlet {
 //				}
 				pw.println();
 				pw.println("</body></html>");
-			
-
 	}
 
 }

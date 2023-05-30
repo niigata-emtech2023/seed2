@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body{
+	background-color:#fffff0;
+	text-align:center;
+	margin-top:150px;
+	font-family:"MS ゴシック";
+	font-size:150%;
+}
+#wrapper{
+	margin:0px auto;
+	padding:0px;
+	text-align:center;
+	width:1024px;
+}
+#text{
+	background-color:#ffffff;
+	border-color:#ffcc66;
+	width:400px;
+	padding:20px;
+	margin:40px auto;
+	border-width:3px;
+	border-style:solid;
+	border-radius:10px;
+}
+.bottan{
+	display: flex;
+    justify-content:center;
+    gap: 20px;/*縦・横で同じ余白*/
+    gap: 20px 30px;
+    margin-top:40px;
+}
+.button-panel{
+	border-color:#ffa500;
+	background-color:#ffa500;
+	width:100px;
+}	
