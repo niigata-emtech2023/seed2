@@ -25,6 +25,6 @@
 	
 	<% session.invalidate(); %>
 
-	<form action="adminselect.jsp" method="POST">
+	<form action="select-all-servlet" method="POST">
 		<input type="submit" value="メニューに戻る">
 	</form>

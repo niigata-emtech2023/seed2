@@ -44,15 +44,13 @@ public class SelectMyRankServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		SelectMyRankDAO dao = new SelectMyRankDAO();
-		
-		SpoFesBean bean = new SpoFesBean();
 
 		List<SpoFesBean> list = new ArrayList<SpoFesBean>();
 
 		HttpSession session = request.getSession();
 		String name = (String)session.getAttribute("name");
 
-		list = dao.select(name,bean);
+		list = dao.select(name);
 		session.setAttribute("myteamrank", list);
 
 		RequestDispatcher rd = request.getRequestDispatcher("select-all-servlet");

@@ -48,7 +48,7 @@ public class selectAllServlet extends HttpServlet {
 		try {
 			SelectAllDAO selectAllDao = new SelectAllDAO();
 			List<SpoFesBean> taskList = selectAllDao.selectAll();
-			request.setAttribute("taskList", taskList);
+			session.setAttribute("taskList", taskList);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

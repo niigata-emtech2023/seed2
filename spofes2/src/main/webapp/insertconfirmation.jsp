@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="model.entity.SpoFesBean,java.util.List"%>
+   
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +19,9 @@
         String task_info = request.getParameter("task_info");
         session.setAttribute("task_info" , task_info);
 	%>
-        内容<br>
+        内容：
         <%=task_info %><br>
-        
+    
     <form action = "insert.jsp" method = "POST">
         <input type = "submit" value = "戻る">
     </form>

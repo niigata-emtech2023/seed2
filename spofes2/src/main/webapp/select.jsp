@@ -10,12 +10,12 @@
 	<%@ include file="header.jsp" %>
 
 	<% 
-		List<SpoFesBean> taskList = (List<SpoFesBean>)request.getAttribute("taskList");
+		List<SpoFesBean> taskList = (List<SpoFesBean>)session.getAttribute("taskList");
 	
 	%>
 	
 	<h3>☆得点項目一覧</h3>
-	<table border>
+	<table border="1">
 	<% int i = 1; %>
 	<%
 		for (SpoFesBean task : taskList) {

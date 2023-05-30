@@ -5,13 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import model.entity.SpoFesBean;
-
 public class LoginDAO {
-	public boolean loginCheck(String Id, String pass,SpoFesBean bean) throws ClassNotFoundException, SQLException {
+	public String loginCheck(String Id, String pass) throws ClassNotFoundException, SQLException {
 
-		String sql = "SELECT * FROM m_user WHERE id = ? AND pass = ?";
-
+		String sql = "SELECT name FROM m_user WHERE id = ? AND pass = ?";
+		String name=null;
 		// データベースへの接続の取得、PreparedStatementの取得
 		try(Connection con = ConnectionManager.getConnection();
 				PreparedStatement pstmt =  con.prepareStatement(sql)){
@@ -22,13 +20,12 @@ public class LoginDAO {
 
 			// SQLステートメントの実行
 			ResultSet res = pstmt.executeQuery();
-			bean.setName("name");
 
 			// 結果の操作
 			if(res.next()) {
-				return true;
+			name = res.getString("name");
 			}
 		}
-		return false;
+		return name;
 	}
 }

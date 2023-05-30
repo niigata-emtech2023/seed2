@@ -55,9 +55,10 @@ public class LoginServlet extends HttpServlet {
 		try {
 			// DAOの生成
 			LoginDAO loginDao = new LoginDAO();
-
+			
+			String name = loginDao.loginCheck(id,pass);
 			// DAOの利用
-			if (loginDao.loginCheck(id, pass,bean)) {
+			if (!(name.equals(null))) {
 				// 認証成功
 				url = "select-my-rank-servlet";
 
@@ -66,7 +67,7 @@ public class LoginServlet extends HttpServlet {
 
 				// セッションスコープへの属性の設定
 				
-				session.setAttribute("name", bean.getName());
+				session.setAttribute("name", name);
 
 			} else {
 				// 認証失敗

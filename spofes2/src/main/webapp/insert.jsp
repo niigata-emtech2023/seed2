@@ -21,12 +21,12 @@
     if(session.getAttribute("task_info") == null){
     %>
     <textarea name = "task_info" cols ="25" rows = "3">
-    
     </textarea><br>
     <%
     }else {
     %>
     
+    ・内容<br>
     <textarea name = "task_info" cols ="25" rows = "3">
     <%=session.getAttribute("task_info") %>
     </textarea><br>
