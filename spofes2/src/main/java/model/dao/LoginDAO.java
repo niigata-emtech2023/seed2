@@ -10,7 +10,7 @@ import model.entity.SpoFesBean;
 public class LoginDAO {
 	public boolean loginCheck(String Id, String pass,SpoFesBean bean) throws ClassNotFoundException, SQLException {
 
-		String sql = "SELECT * FROM m_user WHERE user_id = ? AND password = ?";
+		String sql = "SELECT * FROM m_user WHERE id = ? AND pass = ?";
 
 		// データベースへの接続の取得、PreparedStatementの取得
 		try(Connection con = ConnectionManager.getConnection();
