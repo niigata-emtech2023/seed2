@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -11,24 +12,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.SelectAllDAO;
+import model.dao.SelectRankDAO;
 import model.entity.SpoFesBean;
 
 /**
- * Servlet implementation class SelectAllServlet
+ * Servlet implementation class SelectRankServlet
  */
-@WebServlet("/select-all-servlet")
-public class selectAllServlet extends HttpServlet {
+@WebServlet("/select-rank-servlet")
+public class SelectRankServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public selectAllServlet() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public SelectRankServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,17 +42,21 @@ public class selectAllServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// セッションオブジェクトの取得
+		
+		SelectRankDAO dao = new SelectRankDAO();
+		
+		SpoFesBean bean = new SpoFesBean();
+		
+		List<SpoFesBean> list = new ArrayList<SpoFesBean>();
+		
 		HttpSession session = request.getSession();
-
-		try {
-			SelectAllDAO selectAllDao = new SelectAllDAO();
-			List<SpoFesBean> taskList = selectAllDao.selectAll();
-			request.setAttribute("taskList", taskList);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
+		
+		list = dao.select(bean);
+		session.setAttribute("teamrank", list);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("select-all-servlet");
 		rd.forward(request, response);
+		
 	}
+
 }

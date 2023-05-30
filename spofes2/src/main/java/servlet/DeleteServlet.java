@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,22 +9,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import model.dao.LoginDAO;
+import model.dao.DeleteDAO;
 import model.entity.SpoFesBean;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class DeleteServlet
  */
-@WebServlet("/login-servlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/delete-servlet")
+public class DeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public LoginServlet() {
+	public DeleteServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -40,49 +40,45 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		String url = null; //画面遷移先
-
+		
+		String url=null;
 		// リクエストオブジェクトのエンコーディング方式の指定
 		request.setCharacterEncoding("UTF-8");
-
 		// リクエストパラメータの取得
-		String id = request.getParameter("id");
-		String pass = request.getParameter("pass");
-		
-		SpoFesBean bean = new SpoFesBean();
+		String taskName = request.getParameter("taskName");
+
+		SpoFesBean spofes = new SpoFesBean();
+		spofes.setTaskName(taskName);
+
+		// DAOの生成
+		DeleteDAO dao = new DeleteDAO();
+
+		int number = 0; //処理件数
 
 		try {
-			// DAOの生成
-			LoginDAO loginDao = new LoginDAO();
-
 			// DAOの利用
-			if (loginDao.loginCheck(id, pass,bean)) {
-				// 認証成功
-				url = "select-my-rank-servlet";
+			number = dao.delete(spofes);
+			if(number==1) {
 
-				// セッションオブジェクトの取得
-				HttpSession session = request.getSession();
-
-				// セッションスコープへの属性の設定
+				// リクエストスコープへの属性の設定
+				request.setAttribute("spofes", spofes);
+				request.setAttribute("number", number);
 				
-				session.setAttribute("name", bean.getName());
-
-			} else {
-				// 認証失敗
-				url = "login.jsp";
-				request.setAttribute("err","IDかパスワードが間違っています。");
+				url = "deleteresult.jsp";
+			}else {
+				url = "deleteconfirmation.jsp";
+				request.setAttribute("err","削除できませんでした。");
+				
 			}
 
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 
-		// リクエストの転送
-		RequestDispatcher rd = request.getRequestDispatcher(url);
-		rd.forward(request, response);
-		
 
+		// リクエストの転送
+		RequestDispatcher rd = request.getRequestDispatcher("deleteresult.jsp");
+		rd.forward(request, response);
 	}
 
 }

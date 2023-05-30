@@ -10,20 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.LoginDAO;
+import model.dao.LoginAdminDAO;
 import model.entity.SpoFesBean;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class AdminLoginServlet
  */
-@WebServlet("/login-servlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/admin-login-servlet")
+public class AdminLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public LoginServlet() {
+	public AdminLoginServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -41,25 +41,23 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String url = null; //画面遷移先
+		String url = null;
 
-		// リクエストオブジェクトのエンコーディング方式の指定
 		request.setCharacterEncoding("UTF-8");
-
-		// リクエストパラメータの取得
+		
 		String id = request.getParameter("id");
 		String pass = request.getParameter("pass");
 		
-		SpoFesBean bean = new SpoFesBean();
-
+		
 		try {
 			// DAOの生成
-			LoginDAO loginDao = new LoginDAO();
+			LoginAdminDAO dao = new LoginAdminDAO();
+			SpoFesBean bean = new SpoFesBean();
 
 			// DAOの利用
-			if (loginDao.loginCheck(id, pass,bean)) {
+			if (dao.login(id, pass,bean)) {
 				// 認証成功
-				url = "select-my-rank-servlet";
+				url = "select-rank-servlet";
 
 				// セッションオブジェクトの取得
 				HttpSession session = request.getSession();
@@ -70,19 +68,17 @@ public class LoginServlet extends HttpServlet {
 
 			} else {
 				// 認証失敗
-				url = "login.jsp";
+				url = "adminlogin.jsp";
 				request.setAttribute("err","IDかパスワードが間違っています。");
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		// リクエストの転送
+		
 		RequestDispatcher rd = request.getRequestDispatcher(url);
 		rd.forward(request, response);
 		
-
 	}
 
 }

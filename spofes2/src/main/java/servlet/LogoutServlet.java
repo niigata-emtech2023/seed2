@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,21 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.SelectAllDAO;
-import model.entity.SpoFesBean;
-
 /**
- * Servlet implementation class SelectAllServlet
+ * Servlet implementation class LogoutServlet
  */
-@WebServlet("/select-all-servlet")
-public class selectAllServlet extends HttpServlet {
+@WebServlet("/logout-servlet")
+public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public selectAllServlet() {
+	public LogoutServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -45,14 +40,12 @@ public class selectAllServlet extends HttpServlet {
 		// セッションオブジェクトの取得
 		HttpSession session = request.getSession();
 
-		try {
-			SelectAllDAO selectAllDao = new SelectAllDAO();
-			List<SpoFesBean> taskList = selectAllDao.selectAll();
-			request.setAttribute("taskList", taskList);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
+		// セッションオブジェクトの無効化
+		session.invalidate();
+
+		// リクエストの転送
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 		rd.forward(request, response);
 	}
+
 }
