@@ -17,7 +17,7 @@ public class SelectMyRankDAO {
 
 		try {
 
-			String sql = "SELECT team_name,point FROM m_rank r,m_team t,m_user u "
+			String sql = "SELECT team_name,point FROM t_rank r,m_team t,m_user u "
 					+ "WHERE r.team_id = t.team_id AND u.team_id = t.team_id AND name = ?";
 
 			try(Connection con = ConnectionManager.getConnection();
