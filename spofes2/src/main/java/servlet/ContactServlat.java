@@ -1,9 +1,7 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,21 +9,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.dao.SelectAllDAO;
-import model.dao.TeamNameDAO;
-import model.entity.SpoFesBean;
+import model.dao.ContactDAO;
 
 /**
- * Servlet implementation class ContactDisplayServlet
+ * Servlet implementation class ContactServlat
  */
-@WebServlet("/contact-display-servlet")
-public class ContactDisplayServlet extends HttpServlet {
+@WebServlet("/contact-servlat")
+public class ContactServlat extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ContactDisplayServlet() {
+    public ContactServlat() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,22 +38,13 @@ public class ContactDisplayServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
-
-		try {
-			SelectAllDAO selectAllDao = new SelectAllDAO();
-			List<SpoFesBean> taskList = selectAllDao.selectAll();
-			request.setAttribute("taskList", taskList);
-			
-			TeamNameDAO teamnameDao = new TeamNameDAO();
-			List<SpoFesBean> teamList = teamnameDao.getTeamName();
-			request.setAttribute("teamList", teamList);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		RequestDispatcher rd = request.getRequestDispatcher("contact.jsp");
-		rd.forward(request, response);
+		String point = (String)session.getAttribute("point");
+		String teamname = (String)session.getAttribute("teamname");
+		
+		ContactDAO dao = new ContactDAO();
+		dao.checkTask(point,teamname);
 	}
+
 }

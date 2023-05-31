@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-	List<SpoFesBean> taskList = (List<SpoFesBean>) request.getAttribute("taskList");
+	List<SpoFesBean> taskList = (List<SpoFesBean>) session.getAttribute("taskList");
 	List<SpoFesBean> teamList = (List<SpoFesBean>) request.getAttribute("teamList");
 	%>
 
@@ -25,7 +25,7 @@
 			}
 			%>
 		</select> <br>
-		<table border>
+		<table border="1">
 			<%
 			for (SpoFesBean task : taskList) {
 			%>
@@ -33,8 +33,10 @@
 				<td><%=task.getTaskId()%></td>
 				<td><%=task.getTaskName()%></td>
 				<td>
-					<input type="radio" name="check<%=task.getTaskId()%>" value="true">〇
-					<input type="radio" name="check<%=task.getTaskId()%>" value="false">×
+					<input type="radio" name="task<%=task.getTaskId()%>" value="1">
+				</td>
+				<td>
+					<input type="radio" name="task<%=task.getTaskId()%>" value="0" checked="checked">
 				</td>
 			</tr>
 			<%
@@ -43,22 +45,7 @@
 		</table>
 
 	<br>
-	＜コメント＞<br>
-	<table border>
-		<tr>
-			<td>
-			<select name="coment_id">
-			<%
-			for (SpoFesBean task : taskList) {
-			%>
-			<option value="<%=task.getTaskId()%>>"><%=task.getTaskId()%></option>
-			<%
-			}
-			%>
-			</td>
-			<td><textarea name="coment" cols="80" rows="4"></textarea></td>
-		</tr>
-	</table>
+
 	<input type="submit" value="登録" >
 	</form>
 </body>
