@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.dao.LoginDAO;
-import model.entity.SpoFesBean;
 
 /**
  * Servlet implementation class LoginServlet
@@ -49,8 +48,6 @@ public class LoginServlet extends HttpServlet {
 		// リクエストパラメータの取得
 		String id = request.getParameter("id");
 		String pass = request.getParameter("pass");
-		
-		SpoFesBean bean = new SpoFesBean();
 
 		try {
 			// DAOの生成

@@ -51,7 +51,7 @@ public class SelectRankServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		
-		list = dao.select(bean);
+		list = dao.select();
 		session.setAttribute("teamrank", list);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("select-all-servlet");

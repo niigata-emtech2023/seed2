@@ -1,7 +1,9 @@
 package servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.dao.ContactDAO;
+import model.entity.SpoFesBean;
 
 /**
  * Servlet implementation class ContactServlat
@@ -38,13 +41,31 @@ public class ContactServlat extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String url=null;
+		
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
-		String point = (String)session.getAttribute("point");
-		String teamname = (String)session.getAttribute("teamname");
+		int point = Integer.parseInt(request.getParameter("point"));
+		String teamname = request.getParameter("teamname");
+		session.setAttribute("teamname", teamname);
+		SpoFesBean bean =new SpoFesBean();
+		bean.setPoint(point);
+		bean.setTeamName(teamname);
 		
 		ContactDAO dao = new ContactDAO();
-		dao.checkTask(point,teamname);
+		try {
+			if((dao.checkTask(bean)==1)){
+				url="contactresult.jsp";
+				
+			}else {
+				url="contactconfirmation.jsp";
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+		RequestDispatcher rd = request.getRequestDispatcher(url);
+		rd.forward(request, response);
 	}
 
 }

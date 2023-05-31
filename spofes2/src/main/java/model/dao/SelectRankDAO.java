@@ -11,13 +11,13 @@ import model.entity.SpoFesBean;
 
 public class SelectRankDAO {
 
-	public List<SpoFesBean> select(SpoFesBean bean){
+	public List<SpoFesBean> select(){
 
 		List<SpoFesBean> list = new ArrayList<SpoFesBean>();
 
 		try {
 
-			String sql = "SELECT * FROM m_rank r,m_team t WHERE r.team_id = t.team_id ORDER BY point";
+			String sql = "SELECT team_name,point FROM t_rank r,m_team t WHERE r.team_id = t.team_id ORDER BY point DESC";
 
 			try(Connection con = ConnectionManager.getConnection();
 					PreparedStatement pstmt =  con.prepareStatement(sql)){
@@ -28,6 +28,7 @@ public class SelectRankDAO {
 				while (res.next()) {
 					String teamName = res.getString("team_name");
 					int point = res.getInt("point");
+					SpoFesBean bean = new SpoFesBean();
 					
 					bean.setTeamName(teamName);
 					bean.setPoint(point);

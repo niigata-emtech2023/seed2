@@ -28,7 +28,7 @@ table td {/*table内のtdに対して*/
   	font-size:150%
   	 
 }
-td{
+tbody td{
 	background-color:#fff;
 	border-width:3px;
 	border:solid 2px #ff9966;
@@ -47,7 +47,7 @@ td{
 	text-align:left;
 	
 }
-tbody {
+.tbody {
   display: block;
   overflow-y: scroll;
   height: 463px;

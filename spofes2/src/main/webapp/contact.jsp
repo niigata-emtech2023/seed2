@@ -17,10 +17,11 @@
 	</form>
 	<form action="contactconfirmation.jsp" method="post">
 		＜check欄＞<select name="team_name">
+		<option value="" selected disabled>団名</option>
 			<%
 			for (SpoFesBean team : teamList) {
 			%>
-			<option value="<%=team.getTeamName()%>>"><%=team.getTeamName()%></option>
+			<option value="<%=team.getTeamName()%>"><%=team.getTeamName()%></option>
 			<%
 			}
 			%>

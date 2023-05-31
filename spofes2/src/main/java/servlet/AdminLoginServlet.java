@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.dao.LoginAdminDAO;
-import model.entity.SpoFesBean;
 
 /**
  * Servlet implementation class AdminLoginServlet
@@ -52,10 +51,11 @@ public class AdminLoginServlet extends HttpServlet {
 		try {
 			// DAOの生成
 			LoginAdminDAO dao = new LoginAdminDAO();
-			SpoFesBean bean = new SpoFesBean();
+			
+			String name = dao.login(id,pass);
 
 			// DAOの利用
-			if (dao.login(id, pass,bean)) {
+			if (!(name.equals(null))) {
 				// 認証成功
 				url = "select-rank-servlet";
 
@@ -64,7 +64,7 @@ public class AdminLoginServlet extends HttpServlet {
 
 				// セッションスコープへの属性の設定
 				
-				session.setAttribute("name", bean.getName());
+				session.setAttribute("name", name);
 
 			} else {
 				// 認証失敗

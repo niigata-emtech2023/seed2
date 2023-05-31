@@ -5,11 +5,11 @@ span{
 	font-family:Comic Sans MS;
 	padding-left: 60px;
 	padding-top: 11px;
-	width:50%;
+	width:20%;
 }
 #name{
 	font-size:30px;
-	width:50%;
+	width:20%;
 	padding-left:1000px;
 	padding-top: 15px;
 	font-family:Meiryo UI;
@@ -22,4 +22,63 @@ header{
 	background-color:#ffa500;
 	font-size:80%;
 	width:150px;
+}
+.rank{
+	width:100px;
+	font-size:20px;
+	font-weight:bold
+}
+
+.rank td{
+	background:rgba(255,0,0,0);
+}
+.rank tr{
+	
+	text-align:right;
+}
+.rank1{
+	min-width:100px;
+}
+.rank2{
+	min-width:100px;
+}
+.td1{
+	min-width:20px;
+	text-align:right;
+}
+.td2{
+	min-width:20px;
+	text-align:right;
+}
+.td3{
+	min-width:20px;
+	text-align:right;
+}
+.td4{
+	width:20px;
+	text-align:right;
+}
+.td5{
+	min-width:20px;
+	text-align:right;
+}
+.td11{
+	min-width:20px;
+	text-align:right;
+}
+.td12{
+	min-width:20px;
+	text-align:right;
+}
+.td13{
+	min-width:20px;
+	text-align:right;
+}
+.td14{
+	min-width:20px;
+	text-align:right;
+}
+.td15{
+	min-width:20px;
+	text-align:right;
 }

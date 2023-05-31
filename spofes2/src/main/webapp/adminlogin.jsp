@@ -14,7 +14,7 @@
 		</div>
 		<div class="s1">
 			<div id="s5">ログイン</div>
-			<form action="login-servlet" method="POST">
+			<form action="admin-login-servlet" method="POST">
 				<div id="s2">ID</div>
 				<br>
 				<div class="s4">

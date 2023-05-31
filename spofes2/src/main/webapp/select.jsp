@@ -16,8 +16,8 @@
 	%>
 	
 	<p>☆得点項目一覧</p>
-	<table>
-	<tbody>
+	<table class="table">
+	<tbody class="tbody">
 	<% int i = 1; %>
 	<%
 		for (SpoFesBean task : taskList) {
@@ -31,8 +31,7 @@
 		}
 	%></tbody>
 	</table>
-	<%if(name.equals("admin")){ %>
-	
+	<%if(name.equals("管理者１")){ %>
 	<%@ include file="task_button.jsp" %>
 	<%} %>
 </body>

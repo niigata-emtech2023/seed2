@@ -15,10 +15,12 @@
 
 	%>
 
-	<%=request.getParameter("team_name")%>
+	<%=request.getParameter("team_name")%>団
 	<br> ＜チェック欄＞ これでよろしいでしょうか
 	<table border="1">
-		<%int i = 1;
+		<%
+			int i = 1;
+			List<Integer> list = new ArrayList<Integer>();
 			for (SpoFesBean bean : taskList) {
 			%>
 		<tr>
@@ -27,21 +29,26 @@
 			<td>
 				<%if(1==Integer.parseInt(request.getParameter("task"+i))){ %>
 					1点 
-					point++:
-					<% %>
+					<% point++;%>
+					<% bean.setPoint(Integer.parseInt(request.getParameter("task"+i)));
+						
+					%>
 				<%}else{ %> 
 					0点 
 				<%} %>
 			</td>
 		</tr>
-		<%i++;
+		<%
+			i++;
 			}
-			session.setAttribute("point", point);
-			session.setAttribute("teamname",request.getParameter("team_name"));
+			session.setAttribute("taskList",taskList);
+			
 			%>
 	</table>
-	<form action="contact-servlet" method="post">
+	<form action="contact-servlat" method="post">
 		<input type="submit" value="確定">
+		<input type="hidden" name="point" value="<%=point%>">
+		<input type="hidden" name="teamname" value="<%=request.getParameter("team_name")%>">
 	</form>
 	<form action="contact-display-servlet" method="post">
 		<input type="submit" value="戻る">
