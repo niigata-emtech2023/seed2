@@ -1,0 +1,25 @@
+@charset "UTF-8";
+span{
+	font-size:40px;
+	color:#ffc184;
+	font-family:Comic Sans MS;
+	padding-left: 60px;
+	padding-top: 11px;
+	width:50%;
+}
+#name{
+	font-size:30px;
+	width:50%;
+	padding-left:1000px;
+	padding-top: 15px;
+	font-family:Meiryo UI;
+}
+header{
+	display:flex;
+}
+.button-panel{
+	border-color:#ffa500;
+	background-color:#ffa500;
+	font-size:80%;
+	width:150px;
+}

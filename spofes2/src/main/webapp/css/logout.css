@@ -5,7 +5,7 @@ body{
 	text-align:center;
 	margin-top:150px;
 	font-family:"MS ゴシック";
-	font-size:150%;
+	font-size:260%;
 }
 #wrapper{
 	margin:0px auto;
@@ -16,8 +16,8 @@ body{
 #text{
 	background-color:#ffffff;
 	border-color:#ffcc66;
-	width:400px;
-	padding:20px;
+	width:700px;
+	padding:50px;
 	margin:40px auto;
 	border-width:3px;
 	border-style:solid;
@@ -33,5 +33,6 @@ body{
 .button-panel{
 	border-color:#ffa500;
 	background-color:#ffa500;
-	width:100px;
+	width:180px;
+	font-size:70%;
 }	

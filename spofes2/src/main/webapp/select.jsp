@@ -5,32 +5,35 @@
 <head>
 <meta charset="UTF-8">
 <title>タスク一覧</title>
+<link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
 	<%@ include file="header.jsp" %>
 
 	<% 
 		List<SpoFesBean> taskList = (List<SpoFesBean>)session.getAttribute("taskList");
-	
+		
 	%>
 	
-	<h3>☆得点項目一覧</h3>
-	<table border="1">
+	<p>☆得点項目一覧</p>
+	<table>
+	<tbody>
 	<% int i = 1; %>
 	<%
 		for (SpoFesBean task : taskList) {
 	%>
 		<tr>
-			<td><%=task.getTaskId()%></td>
-			<td><%=task.getTaskName()%></td>
+			<td class="kazu"><%=task.getTaskId()%></td>
+			<td class="task"><%=task.getTaskName()%></td>
 			
 		</tr>
 	<%
 		}
-	%>
+	%></tbody>
 	</table>
+	<%if(name.equals("admin")){ %>
 	
 	<%@ include file="task_button.jsp" %>
-	
+	<%} %>
 </body>
 </html>

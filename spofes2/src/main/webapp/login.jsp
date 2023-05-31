@@ -9,8 +9,11 @@
 </head>
 <body>
 	<div id="wrapper">
+	<div class="title">
+		『Spofes』を始めよう！
+		</div>
 		<div class="s1">
-			<div id="s5">『Spofes』を始めよう！</div>
+			<div id="s5">ログイン</div>
 			<form action="login-servlet" method="POST">
 				<div id="s2">ID</div>
 				<br>

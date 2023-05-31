@@ -3,12 +3,15 @@
 <%String name = (String)session.getAttribute("name");
 	List<SpoFesBean> list = (List<SpoFesBean>)session.getAttribute("myteamrank");
 %>
+<head>
+<link rel="stylesheet" href="./css/header.css">
+</head>
+<header>
 <span>Spofes</span>
-<%for(SpoFesBean bean: list){ %>
-<%=bean.getTeamName() %>
-<%=bean.getPoint() %>
-<%} %>
-<%=name %>
+<div id="name">
+	<%=name %>さん
+
 <form action="logout.jsp" method="post">
-	<input type="submit" value="ログアウト">
-</form>
+	<input class="button-panel" type="submit" value="ログアウト">
+</form></div>
+</header>

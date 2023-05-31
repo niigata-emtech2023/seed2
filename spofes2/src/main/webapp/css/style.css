@@ -10,7 +10,7 @@
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 40px;
-	margin:40px auto;
+	margin:20px auto;
 	border-radius:20px;
 	
 }
@@ -41,9 +41,15 @@
 }
 body{
 	margin:0px auto;
-	padding:100px;
+	padding:80px;
 	text-align:center;
 	background-color:#fffff0;
+}
+.admin{
+	margin:0px auto;
+	padding:80px;
+	text-align:center;
+	background-color:#f4ffea;
 }
 #wrapper{
 	margin:0px auto;
@@ -67,4 +73,11 @@ input[type="text"]{
 
 input[type="password"]{
 	font-size:150%;
+}
+.title{
+	font-size:320%;
+	font-style:italic;
+	font-family:Comic Sans MS;
+	
+	
 }
