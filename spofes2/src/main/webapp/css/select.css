@@ -222,3 +222,6 @@ tbody td{
 .table1{
     margin:-50px auto;
 }
+.radiobutton{
+	transform:scale(2.5);
+}

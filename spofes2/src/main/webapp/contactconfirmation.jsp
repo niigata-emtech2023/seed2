@@ -30,6 +30,7 @@
 		<tbody class="tbody2">
 		<%
 			int i = 1;
+			int[] radio = new int[taskList.size()];
 			List<Integer> list = new ArrayList<Integer>();
 			for (SpoFesBean bean : taskList) {
 			%>
@@ -39,12 +40,15 @@
 			<td class="radio2">
 				<%if(1==Integer.parseInt(request.getParameter("task"+i))){ %>
 					1
-					<% point++;%>
+					<% 	point++;
+						radio[i-1]=1;
+					%>
 					<% bean.setPoint(Integer.parseInt(request.getParameter("task"+i)));
 						
 					%>
 				<%}else{ %> 
 					0
+					radio[i-1]=0;
 				<%} %>
 			</td>
 		</tr>
@@ -52,7 +56,7 @@
 			i++;
 			}
 			session.setAttribute("taskList",taskList);
-			
+			session.setAttribute("radio",radio);
 			%>
 			</tbody>
 	</table>
@@ -62,6 +66,7 @@
 	</div>
 	<form  action="contact-display-servlet" method="post">
 		<input class="bottombuttonright" type="submit" value="戻る">
+		<input type="hidden" name="point" value="<%=radio%>">
 	</form>
 	<form action="contact-servlat" method="post">
 		<input class="bottombuttonleft" type="submit" value="確定">

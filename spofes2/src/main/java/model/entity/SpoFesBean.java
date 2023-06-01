@@ -21,7 +21,8 @@ public class SpoFesBean implements Serializable{
 	/**
 	 * 得点項目ID
 	 */
-	private int taskId; 
+	private int taskIdID; 
+	private String taskId; 
 	
 	/**
 	 * 得点項目名
@@ -70,7 +71,7 @@ public class SpoFesBean implements Serializable{
 	 * フィールドtaskIdの値を返します
 	 * @return
 	 */
-	public int getTaskId() {
+	public String getTaskId() {
 		return taskId;
 	}
 
@@ -79,10 +80,18 @@ public class SpoFesBean implements Serializable{
 	 * フィールドtaskIdの値を設定します
 	 * @return
 	 */
-	public void setTaskId(int taskId) {
+	public void setTaskId(String taskId) {
 		this.taskId = taskId;
 	}
 
+
+	public int getTaskIdID() {
+		return taskIdID;
+	}
+
+	public void setTaskIdID(int taskIdID) {
+		this.taskIdID = taskIdID;
+	}
 
 	/**
 	 * フィールドtaskNameの値を返します

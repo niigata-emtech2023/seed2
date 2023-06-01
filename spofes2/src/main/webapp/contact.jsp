@@ -11,6 +11,7 @@
 	<%
 	List<SpoFesBean> taskList = (List<SpoFesBean>) session.getAttribute("taskList");
 	List<SpoFesBean> teamList = (List<SpoFesBean>) request.getAttribute("teamList");
+	
 	%>
 	<div class="top">
 	<form action="select-all-servlet" method="post">
@@ -38,10 +39,10 @@
 				<td class="kazucheck"><%=task.getTaskId()%></td>
 				<td class="task"><%=task.getTaskName()%></td>
 				<td class="radio">
-					<input type="radio" name="task<%=task.getTaskId()%>" value="1">
+					<input type="radio" class="radiobutton" name="task<%=task.getTaskId()%>" value="1">
 				</td>
 				<td class="radio">
-					<input type="radio" name="task<%=task.getTaskId()%>" value="0" checked="checked">
+					<input type="radio" class="radiobutton" name="task<%=task.getTaskId()%>" value="0" checked="checked">
 				</td>
 			</tr>
 			<%

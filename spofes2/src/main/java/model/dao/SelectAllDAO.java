@@ -24,7 +24,7 @@ public class SelectAllDAO {
 			// 結果の操作
 			while(res.next()) {
 				SpoFesBean task = new SpoFesBean();
-				task.setTaskId(res.getInt("task_id"));
+				task.setTaskId(res.getString("task_id"));
 				task.setTaskName(res.getString("task_info"));
 				list.add(task);
 			}
