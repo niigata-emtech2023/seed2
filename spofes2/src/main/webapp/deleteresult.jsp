@@ -5,28 +5,33 @@
 <head>
 <meta charset="UTF-8">
 <title>得点項目削除完了画面</title>
+<link rel = "stylesheet" href = "./css/deleteresult.css">
 </head>
 <body>
-    &lt;削除確定画面&gt;
+    <span id = s1>&lt;得点項目削除完了画面&gt;</span>
+    <br><br>
 	<%
 		int number = (Integer) request.getAttribute("number");
 		if (number > 0) {
 	%>
-	削除しました。<br>
+	<span class = c1>削除しました。</span><br>
 	<%
 		} else {
 	%>
-	削除できませんでした。<br>
+	<span class = c1>削除できませんでした。</span><br>
 	<%
 		}
 	%>
 	<%
 	String task = (String)session.getAttribute("task");
 	%>
-	内容<%=task %><br>
+	
+	<div class = task>
+	<span id = s3>内容</span><span id = s4><%=task %></span><br>
+	</div>
 
 	<form action="select-all-servlet" method="POST">
-		<input type="submit" value="メニューに戻る">
+		<input id = s5 type="submit" value="メニューに戻る">
 	</form>
 
 	<% session.invalidate(); %>
