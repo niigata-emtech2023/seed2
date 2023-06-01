@@ -30,7 +30,7 @@
 	<span id = s3>内容</span><span id = s4><%=task %></span><br>
 	</div>
 
-	<form action="select-all-servlet" method="POST">
+	<form action="select-rank-servlet" method="POST">
 		<input id = s5 type="submit" value="メニューに戻る">
 	</form>
 
