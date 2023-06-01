@@ -186,6 +186,10 @@ tbody td{
 	margin-top:40px;
 	margin-left:970px;
 }
+.point{
+	display:flex;
+	margin-top:40px;
+}
 .bottombuttomenu{
 	display:block;
 	margin-left:1150px;

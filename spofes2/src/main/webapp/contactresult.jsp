@@ -12,6 +12,7 @@
 	request.setCharacterEncoding("UTF-8");
 	List<SpoFesBean> taskList = (List<SpoFesBean>) session.getAttribute("taskList");
 	String teamname = (String)session.getAttribute("teamname");
+	String point = (String)session.getAttribute("point");
 	%>
 	<div class="topcheck">
 	<div class="topcheckleft">
@@ -43,7 +44,7 @@
 			</tbody>
 	</table>
 	
-	<div class="under">
+	<div class="under1">
 	 <div class="point">
 	 </div>
 	<form action="select-rank-servlet" method="post">
