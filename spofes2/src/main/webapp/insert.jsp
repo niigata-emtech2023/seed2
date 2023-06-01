@@ -13,7 +13,7 @@
     %>
 
     <div id = s1>&lt;新規得点項目登録&gt;</div>
-    <form action = "select-all-servlet" method = "POST">
+    <form action = "select.jsp" method = "POST">
         <input id = button1 type = "submit" value = "メニューに戻る">
     </form><br>
     
