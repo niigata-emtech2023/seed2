@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.dao.DeleteDAO;
+import model.dao.SelectAllDAO;
+import model.entity.SpoFesBean;
 
 /**
  * Servlet implementation class DeleteServlet
@@ -57,6 +60,10 @@ public class DeleteServlet extends HttpServlet {
 			// DAOの利用
 			number = dao.delete(task);
 			if(number==1) {
+				
+				SelectAllDAO selectAllDao = new SelectAllDAO();
+				List<SpoFesBean> taskList = selectAllDao.selectAll();
+				session.setAttribute("taskList", taskList);
 
 				// リクエストスコープへの属性の設定
 				request.setAttribute("number", number);
