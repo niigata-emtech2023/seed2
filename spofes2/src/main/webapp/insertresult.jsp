@@ -29,7 +29,7 @@
 	
 	<% session.invalidate(); %>
 
-	<form action="select.jsp" method="POST">
+	<form action = "select-rank-servlet" method = "POST">
 		<input id = s5 type="submit" value="メニューに戻る">
 	</form>
 	

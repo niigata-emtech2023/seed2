@@ -30,7 +30,7 @@
 	<span id = s3>内容</span><span id = s4><%=task %></span><br>
 	</div>
 
-	<form action="adminselect.jsp" method="POST">
+	<form action = "adminselect.jsp" method = "POST">
 		<input id = s5 type="submit" value="メニューに戻る">
 	</form>
 
