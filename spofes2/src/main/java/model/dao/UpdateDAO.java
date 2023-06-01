@@ -18,11 +18,11 @@ public class UpdateDAO {
 		// データベースへの接続の取得、PreparedStatementの取得
 		try (Connection con = ConnectionManager.getConnection();
 				PreparedStatement pstmt = con.prepareStatement(sql)) {
-			int task_id = spofes.getTaskId();
+			String task_id = spofes.getTaskId();
 			String update_info= spofes.getTaskName();
 			
 			pstmt.setString(1, update_info);
-			pstmt.setInt(2, task_id);
+			pstmt.setString(2, task_id);
 			
 			count = pstmt.executeUpdate();
 		} 

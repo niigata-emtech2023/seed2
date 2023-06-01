@@ -16,7 +16,8 @@ request.setCharacterEncoding("UTF-8");
 <table class="tableres">
 <tr><td class="table1">内容</td><td class="table2"><%=request.getAttribute("update_info")%></td></tr>
 </table>
-<form action="adminselect.jsp"　method="post">
+<form action="adminselect.jsp" method="post">
 	<input class="bottombuttonreturn" type="submit" value="メニューに戻る">
+	</form>
 </body>
 </html>

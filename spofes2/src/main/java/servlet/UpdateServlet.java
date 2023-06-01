@@ -48,7 +48,7 @@ public class UpdateServlet extends HttpServlet {
 		// セッションオブジェクトの取得
 		HttpSession session = request.getSession();
 
-		int task_id  = Integer.parseInt(request.getParameter("task_id"));
+		String task_id  = request.getParameter("task_id");
 		String update_info = (String) request.getParameter("update_info");
 		int count = 0;
 		String url = "adminselect.jsp";
