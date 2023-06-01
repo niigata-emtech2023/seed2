@@ -15,21 +15,19 @@ body{
 
 #s1{
 	font-size: 300%;
-	text-align: left;
-	margin-top:1px;
-	margin-left: 200px;
-	float: left;
-	width: 900px;
+	text-align: center;
+	margin-left: 150px;
 	
 }
 
 #s2{
+	width:700px;
+	height:65px;
 	border-color: #ffcc66;
 	border-style: solid;
 	text-align: center;
-	padding-right: 100px;
-	padding-left: 100px;
-	margin-left: 450px;
+	padding:5px 20px;
+	margin: 10px auto;
 	font-size: 300%;
 	background-color: #ffbf7f;
 }
@@ -92,16 +90,23 @@ body{
 	background-color: #ffa500;
 	font-size: 200%;
 	text-align: center;
-	margin-right: 200px; 
+	margin-left: 410px; 
 	display: flex;
 	
 }
 
-#c1{
-	font-size: 280%;
+#c1 {
+	font-size: 150%;
 	text-align: left;
-	margin-left: 200px;
+	margin-right: 200px;
+}
 
+#c2 {
+	font-size: 280%;
+	text-align: right;
+	padding-left: 30px;
+	margin-right: 100px;
+	
 }
 
 #button2{
@@ -158,8 +163,40 @@ textarea{
 	display: flex;
 }
 
-table{
-	margin:10px auto;
+.tablecon{
+	
+	margin:50px auto;
+	font-size: 250%;
+	background-color: #ffffff;
+	text-align:left;
+
+}
+
+.tableres{
+	
+	margin:150px auto;
+	font-size: 250%;
+	background-color: #ffffff;
+	text-align:left;
+
+}
+
+.table1{
+	width:180px;
+	height:120px;
+	background-color:#ffbf7f;
+	text-align:center;
+	margin:10px 30px;
+}
+
+.table2{
+	width:1000px;
+	margin:0px 50px
+}
+
+table,tr,td{
+	border:1px solid #ffcc66;
+	
 }
 
 #button1{
@@ -201,13 +238,15 @@ textarea{
 }
 
 .bottombuttonleft{
-	margin-left:100px;
+	margin-left:810px;
 	display:block;
 	border-color:#ffa500;
 	background-color:#ffa500;
    	font-size:200%;
     width:150px;
 }
+
+
 .bottombuttonright{
 	display:block;
 	border-color:#ffa500;
@@ -215,8 +254,17 @@ textarea{
    	font-size:200%;
     justify-content:center;
     width:150px;
-	margin-left:700px;
+	margin-left:100px;
 }
+.bottombuttonreturn{
+	margin-left:1080px;
+	display:block;
+	border-color:#ffa500;
+	background-color:#ffa500;
+   	font-size:200%;
+    width:280px;
+}
+
 .under{
 	display:flex;
 	margin-top:40px;
