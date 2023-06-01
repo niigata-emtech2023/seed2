@@ -62,7 +62,7 @@ tbody td{
 .tbody {
   display: block;
   overflow-y: scroll;
-  height: 500px;
+  height: 470px;
   width: 1150px;
   border-collapse:collapse;
   
