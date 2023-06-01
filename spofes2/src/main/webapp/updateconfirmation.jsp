@@ -24,7 +24,7 @@ request.setCharacterEncoding("UTF-8");
 
 <div class="under">
 
-<form action="update.jsp"　method="post">
+<form action="update.jsp" method="post">
 	<input type="hidden" name="task_id" value="<%=request.getParameter("task_id")%>">
 	<input type="hidden" name="task_info" value="<%=request.getParameter("update_info")%>">
 	<input class="bottombuttonleft" type="submit" value="戻る">

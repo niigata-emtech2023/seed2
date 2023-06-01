@@ -36,7 +36,6 @@ request.setCharacterEncoding("UTF-8");
 	<input id=button2 type="submit" value="編集">
 	</form>
 
-	</form>
 
 	<%}else{%>
 	<div class=flex>
