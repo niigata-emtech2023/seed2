@@ -5,49 +5,54 @@
 <head>
 <meta charset="UTF-8">
 <title>チェック画面</title>
+<link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
 	<%
 	List<SpoFesBean> taskList = (List<SpoFesBean>) session.getAttribute("taskList");
 	List<SpoFesBean> teamList = (List<SpoFesBean>) request.getAttribute("teamList");
 	%>
-
+	<div class="top">
 	<form action="select-all-servlet" method="post">
-		<input type=submit value="メニューに戻る">
+		<input class="topbutton" type=submit value="メニューに戻る">
 	</form>
+	</div>
 	<form action="contactconfirmation.jsp" method="post">
-		＜check欄＞<select name="team_name">
-		<option value="" selected disabled>団名</option>
-			<%
+		<div class="check">＜check欄＞<select class="select" name="team_name">
+		
+			<%int i = 1;
 			for (SpoFesBean team : teamList) {
 			%>
-			<option value="<%=team.getTeamName()%>"><%=team.getTeamName()%></option>
-			<%
+			<option class="selectteam<%=i %>" value="<%=team.getTeamName()%>"><%=team.getTeamName()%>団</option>
+			<%i++;
 			}
 			%>
-		</select> <br>
-		<table border="1">
+		</select></div> <br>
+		
+		<table class="table1">
+		<tbody class="tbody2">
 			<%
 			for (SpoFesBean task : taskList) {
 			%>
 			<tr>
-				<td><%=task.getTaskId()%></td>
-				<td><%=task.getTaskName()%></td>
-				<td>
+				<td class="kazucheck"><%=task.getTaskId()%></td>
+				<td class="task"><%=task.getTaskName()%></td>
+				<td class="radio">
 					<input type="radio" name="task<%=task.getTaskId()%>" value="1">
 				</td>
-				<td>
+				<td class="radio">
 					<input type="radio" name="task<%=task.getTaskId()%>" value="0" checked="checked">
 				</td>
 			</tr>
 			<%
 			}
 			%>
+		</tbody>
 		</table>
 
 	<br>
 
-	<input type="submit" value="登録" >
+	<input class="bottombutton" type="submit" value="登録" >
 	</form>
 </body>
 </html>

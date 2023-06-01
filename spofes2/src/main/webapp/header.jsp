@@ -29,8 +29,19 @@
 	</table>
 </div>
 <%}else{ %>
-<div class="myrank">
-</div>
+<%for(SpoFesBean myteam : myteamlist) {%>
+	<div class="userheader">
+		<div class="myrank">
+			暫定<%=myteam.getRank() %>位
+		</div>
+		<div class="myteam">
+			<%=myteam.getTeamName() %>団
+		</div>
+		<div class="mypoint">
+			現在の得点<%=myteam.getPoint() %>点
+		</div>
+	</div>
+	<%} %>
 <%} %>
 <div id="name">
 	<%=name %>さん

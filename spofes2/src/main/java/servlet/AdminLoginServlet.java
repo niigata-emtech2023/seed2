@@ -73,7 +73,8 @@ public class AdminLoginServlet extends HttpServlet {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			url = "adminlogin.jsp";
+			request.setAttribute("err","IDかパスワードが間違っています。");
 		}
 		
 		RequestDispatcher rd = request.getRequestDispatcher(url);

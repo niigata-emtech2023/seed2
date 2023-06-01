@@ -53,5 +53,148 @@ tbody td{
   height: 463px;
   width: 1150px;
   border-collapse:collapse;
+}
+.tbody2 {
+	margin-top:30px;
+  display: block;
+  overflow-y: scroll;
+  height: 463px;
+  width: 1250px;
+  border-collapse:collapse;
+  margin-top:50px;
   
+}
+.radio{
+	padding: 10px 20px;
+	width:10px;
+}
+.radio2{
+	padding: 10px  20px;
+}
+.kazucheck{
+	text-align:center;
+	background-color:#ffbf7f;
+	width: 10px;
+}
+.top{
+	margin:40px 40px;
+	text-align:right;
+}
+.topbutton{
+	border-color:#ffa500;
+	background-color:#ffa500;
+   	font-size:200%;
+    justify-content:center;
+    margin-right:100px;
+}
+.check{
+	margin-top:-70px;
+	margin-left:125px;
+	font-size:40px;
+    justify-content:center;
+    gap: 20px;/*縦・横で同じ余白*/
+    gap: 20px 70px;
+}
+.bottombutton{
+	display:block;
+	margin-left:1230px;
+	margin-top:60px;
+	border-color:#ffa500;
+	background-color:#ffa500;
+   	font-size:200%;
+    justify-content:center;
+    width:150px;
+}
+.select{
+	margin-left:50px;
+   	font-size:150%;
+   	background-color:#f4ffea;
+}
+.selectteam1{
+	color:red;
+}
+.selectteam2{
+	color:blue;
+	
+}
+.selectteam3{
+	color:yellow;
+	
+}
+.selectteam4{
+	color:green;
+	
+}
+.selectteam5{
+	color:pink;
+	
+}
+.team{
+	font-size:200%;
+}
+.topcheck{
+	display:flex;
+	margin-top:30px;
+}
+.topcheckleft{
+	width:27%;
+	display:block;
+	margin-top:20px;
+	padding-left:125px;
+	font-size:40px;
+}
+.topcheckcenter{
+	width:30%;
+	display:block;
+	border-color: #ffcc66;
+	border-style: solid;
+	text-align: center;
+	margin-top:20px;
+	font-size: 200%;
+	background-color: #ffbf7f;
+}
+.topcheckright{
+	font-size: 200%;
+	border-color: #ffcc66;
+	border-style: dashed ;
+	display:block;
+	margin-left:17%;
+	margin-top:25px;
+	font-size: 200%;
+	background-color: #fff;
+    width:120px;
+    text-align:center;
+}
+.bottombuttonleft{
+	margin-left:100px;
+	display:block;
+	border-color:#ffa500;
+	background-color:#ffa500;
+   	font-size:200%;
+    width:150px;
+}
+.bottombuttonright{
+	display:block;
+	border-color:#ffa500;
+	background-color:#ffa500;
+   	font-size:200%;
+    justify-content:center;
+    width:150px;
+}
+.under{
+	display:flex;
+	margin-top:40px;
+	margin-left:970px;
+}
+.bottombuttomenu{
+	display:block;
+	margin-left:1150px;
+	margin-top:40px;
+	border-color:#ffa500;
+	background-color:#ffa500;
+   	font-size:200%;
+    justify-content:center;
+}
+.table1{
+    margin:-50px auto;
 }

@@ -73,7 +73,8 @@ public class LoginServlet extends HttpServlet {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			url = "login.jsp";
+			request.setAttribute("err","IDかパスワードが間違っています。");
 		}
 
 		// リクエストの転送

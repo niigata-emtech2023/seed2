@@ -10,7 +10,6 @@ span{
 #name{
 	font-size:30px;
 	width:20%;
-	padding-left:1000px;
 	padding-top: 15px;
 	font-family:Meiryo UI;
 }
@@ -24,61 +23,70 @@ header{
 	width:150px;
 }
 .rank{
-	width:100px;
+	width:60%;
 	font-size:20px;
-	font-weight:bold
+	font-weight:bold;
 }
 
 .rank td{
 	background:rgba(255,0,0,0);
+	border-color:#fffff0;
 }
 .rank tr{
-	
-	text-align:right;
+	text-align:center;
 }
 .rank1{
-	min-width:100px;
+	width:100%;
 }
 .rank2{
-	min-width:100px;
+	width:100%;
 }
 .td1{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td2{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td3{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td4{
-	width:20px;
-	text-align:right;
+	width:20%;
 }
 .td5{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td11{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td12{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td13{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td14{
-	min-width:20px;
-	text-align:right;
+	width:20%;
 }
 .td15{
-	min-width:20px;
-	text-align:right;
+	width:20%;
+}
+
+.userheader{
+	font-size:30px;
+	padding-top:50px;
+	width:60%;
+	display:flex;
+}
+.myrank{
+	width:33%;
+	display:block;
+}
+.myteam{
+	width:33%;
+	display:block;
+}
+.mypoint{
+	width:33%;
+	display:block;
 }
