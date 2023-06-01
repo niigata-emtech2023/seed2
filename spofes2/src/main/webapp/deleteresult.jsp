@@ -34,7 +34,7 @@
 		<input id = s5 type="submit" value="メニューに戻る">
 	</form>
 
-	<% session.invalidate(); %>
+	<%--<% session.invalidate(); --%>
 
 </body>
 </html>

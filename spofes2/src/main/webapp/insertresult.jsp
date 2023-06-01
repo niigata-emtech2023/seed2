@@ -27,7 +27,7 @@
 	<span id = s3>内容</span><span id = s4><%=session.getAttribute("task_info") %></span><br>
 	</div>
 	
-	<% session.invalidate(); %>
+	<%--<% session.invalidate(); --%>
 
 	<form action = "select-rank-servlet" method = "POST">
 		<input id = s5 type="submit" value="メニューに戻る">
