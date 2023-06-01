@@ -57,6 +57,9 @@
 			</tbody>
 	</table>
 	<div class="under">
+	<div class="point">
+	<%=point%>点
+	</div>
 	<form  action="contact-display-servlet" method="post">
 		<input class="bottombuttonright" type="submit" value="戻る">
 	</form>

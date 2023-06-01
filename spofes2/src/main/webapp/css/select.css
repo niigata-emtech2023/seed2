@@ -180,24 +180,44 @@ tbody td{
    	font-size:200%;
     justify-content:center;
     width:150px;
+	margin-left:700px;
 }
 .under{
 	display:flex;
 	margin-top:40px;
-	margin-left:970px;
+	margin-left:150px;
+}
+.under1{
+	display:flex;
+	margin-left:150px;
 }
 .point{
-	display:flex;
+	display:block;
+    font-size: 200%;
+    border-color: #ffcc66;
+    border-style: dashed;
+    width: 120px;
+    text-align:center;
+	background-color:#fff;
+}
+.point1{
+	display:block;
+    font-size: 200%;
+    border-color: #ffcc66;
+    border-style: dashed;
+    width: 120px;
+    text-align:center;
+	background-color:#fff;
 	margin-top:40px;
 }
 .bottombuttomenu{
 	display:block;
-	margin-left:1150px;
 	margin-top:40px;
 	border-color:#ffa500;
 	background-color:#ffa500;
    	font-size:200%;
     justify-content:center;
+	margin-left:863px;
 }
 .table1{
     margin:-50px auto;

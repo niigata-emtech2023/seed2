@@ -48,9 +48,7 @@ public class ContactServlat extends HttpServlet {
 		int point = Integer.parseInt(request.getParameter("point"));
 		String teamname = request.getParameter("teamname");
 		session.setAttribute("teamname", teamname);
-		Integer i = Integer.valueOf(point);
-		String pointadd = i.toString();
-		session.setAttribute("point",pointadd);
+		session.setAttribute("point",point);
 		SpoFesBean bean =new SpoFesBean();
 		bean.setPoint(point);
 		bean.setTeamName(teamname);
