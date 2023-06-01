@@ -9,17 +9,21 @@
 <link rel="stylesheet" href="./css/adminselect.css">
 </head>
 <body>
-
-<form action="select.jsp">
-	<input class="button-panel" type="submit"value="メニューに戻る">
-</form>
-
-<p>☆得点項目一覧表示</p>
-
-<table>
+<div class="top">
+	<div class="topleft">
+		☆得点項目一覧表示
+	</div>
+		<form action="select.jsp">
+			<input class="topright" type="submit"value="メニューに戻る">
+		</form>
+</div>
+<table class="table">
 <tbody class="tbody">
 <%for(SpoFesBean bean : taskList){ %>
 <tr>
+	<td class="kazu">
+		<%=bean.getTaskId()%>
+	</td>
 	<td>
 		<%=bean.getTaskName() %>
 	</td>

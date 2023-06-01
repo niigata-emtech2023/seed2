@@ -12,7 +12,7 @@ body{
 p{
 	padding-left: 175px;
 	font-family:Meiryo UI;
-	font-size:200%;
+	font-size: 235%;
 	margin-top:0px;
 
 }
@@ -51,7 +51,8 @@ tbody td{
 
 .button-panel{
 	justify-content:right;
-	margin-left:1000px;
+	margin-left:1070px;
+	margin-top: 40px;
 	border-color:#ffa500;
 	background-color:#ffa500;
 	font-size:200%;
@@ -62,7 +63,7 @@ tbody td{
 .tbody {
   display: block;
   overflow-y: scroll;
-  height: 470px;
+  height: 505.9px;
   width: 1150px;
   border-collapse:collapse;
   
@@ -74,4 +75,25 @@ tbody td{
 	font-size:80%;
 	width:100px;
 	justify-content:right;
+}
+
+.top{
+	display:flex;
+	margin-top:70px;
+	margin-bottom:50px;
+}
+.topright{
+	display:block;
+	justify-content:right;
+	border-color:#ffa500;
+	background-color:#ffa500;
+	font-size:200%;
+	width:250px;
+	display: flex;
+	margin-left:470px;
+}
+.topleft{
+	display:block;
+	font-size:300%;
+	margin-left:180px;
 }
