@@ -1,0 +1,77 @@
+@charset "UTF-8";
+#wrapper{
+	margin:0px auto;
+	padding:0px;
+	text-align:center;
+	width:1024px;
+}
+body{
+	background-color:#fffff0;
+}
+
+p{
+	padding-left: 175px;
+	font-family:Meiryo UI;
+	font-size:200%;
+	margin-top:0px;
+
+}
+
+/* まとめて指定する場合 */
+table {
+    margin:-10px auto;    /* 上下3px 左右auto */
+	
+}
+
+
+table td {/*table内のtdに対して*/
+  	padding: 10px 60px;/*上下10pxで左右60px*/
+  	font-size:150%
+  	 
+}
+tbody td{
+	background-color:#fff;
+	border-width:3px;
+	border:solid 2px #ff9966;
+	
+}
+.kazu{
+	text-align:center;
+	background-color:#ffbf7f;
+	width: 20px;
+	
+}
+.task{
+	text-align:center;
+	background-color:#fff;
+	width: 1050px;
+	text-align:left;
+	
+}
+
+.button-panel{
+	justify-content:right;
+	margin-left:1000px;
+	border-color:#ffa500;
+	background-color:#ffa500;
+	font-size:200%;
+	width:250px;
+	display: flex;
+}
+
+.tbody {
+  display: block;
+  overflow-y: scroll;
+  height: 500px;
+  width: 1150px;
+  border-collapse:collapse;
+  
+}
+.tbutton{
+	margin:0px -40px; 
+	border-color:#ffa500;
+	background-color:#ffa500;
+	font-size:80%;
+	width:100px;
+	justify-content:right;
+}
