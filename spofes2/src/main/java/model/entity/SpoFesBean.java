@@ -17,7 +17,7 @@ public class SpoFesBean implements Serializable{
 	 * 名前
 	 */
 	private String name;
-	
+
 	/**
 	 * 得点項目ID
 	 */

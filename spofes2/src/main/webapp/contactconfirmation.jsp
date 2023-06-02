@@ -16,64 +16,60 @@
 
 	%>
 	<div class="topcheck">
-	<div class="topcheckleft">
-		＜チェック欄＞ 
-	</div>
-	<div class="topcheckcenter">
-		これでよろしいでしょうか
-	</div>
-	<div class="topcheckright">
-		<%=request.getParameter("team_name")%>団
-	</div>
+		<div class="topcheckleft">＜チェック欄＞</div>
+		<div class="topcheckcenter">これでよろしいでしょうか</div>
+		<div class="topcheckright">
+			<%=request.getParameter("team_name")%>団
+		</div>
 	</div>
 	<table class="table">
 		<tbody class="tbody2">
-		<%
+			<%
 			int i = 1;
-			int[] radio = new int[taskList.size()];
-			List<Integer> list = new ArrayList<Integer>();
 			for (SpoFesBean bean : taskList) {
 			%>
-		<tr>
-			<td class="kazucheck"><%=bean.getTaskId()%></td>
-			<td class="task"><%=bean.getTaskName()%></td>
-			<td class="radio2">
-				<%if(1==Integer.parseInt(request.getParameter("task"+i))){ %>
-					1
-					<% 	point++;
-						radio[i-1]=1;
+			<tr>
+				<td class="kazucheck"><%=bean.getTaskId()%></td>
+				<td class="task"><%=bean.getTaskName()%></td>
+				<td class="radio2">
+					<%if(1==Integer.parseInt(request.getParameter("task"+i))){ %>
+					1 
+					<% 
+					point++;
+					%> 
+					<% 
+					bean.setPoint(Integer.parseInt(request.getParameter("task"+i)));
 					%>
-					<% bean.setPoint(Integer.parseInt(request.getParameter("task"+i)));
-						
+					<%
+					}else{ 
 					%>
-				<%}else{ %> 
 					0
-					radio[i-1]=0;
-				<%} %>
-			</td>
-		</tr>
-		<%
+					<%
+					}
+					%>
+				</td>
+			</tr>
+			<%
 			i++;
 			}
 			session.setAttribute("taskList",taskList);
-			session.setAttribute("radio",radio);
 			%>
-			</tbody>
+		</tbody>
 	</table>
 	<div class="under">
-	<div class="point">
-	<%=point%>点
-	</div>
-	<form  action="contact-display-servlet" method="post">
-		<input class="bottombuttonright" type="submit" value="戻る">
-		<input type="hidden" name="point" value="<%=radio%>">
-	</form>
-	<form action="contact-servlat" method="post">
-		<input class="bottombuttonleft" type="submit" value="確定">
-		<input type="hidden" name="point" value="<%=point%>">
-		<input type="hidden" name="teamname" value="<%=request.getParameter("team_name")%>">
-	</form>
-	
+		<div class="point">
+			<%=point%>点
+		</div>
+		<form action="contact-display-servlet" method="post">
+			<input class="bottombuttonright" type="submit" value="戻る">
+		</form>
+		<form action="contact-servlat" method="post">
+			<input class="bottombuttonleft" type="submit" value="確定"> <input
+				type="hidden" name="point" value="<%=point%>"> <input
+				type="hidden" name="teamname"
+				value="<%=request.getParameter("team_name")%>">
+		</form>
+
 	</div>
 </body>
 </html>

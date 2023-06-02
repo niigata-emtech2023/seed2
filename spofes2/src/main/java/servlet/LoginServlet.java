@@ -60,9 +60,9 @@ public class LoginServlet extends HttpServlet {
 				url = "select-my-rank-servlet";
 
 				// セッションオブジェクトの取得
-				HttpSession session = request.getSession();
 
 				// セッションスコープへの属性の設定
+				HttpSession session = request.getSession();
 				
 				session.setAttribute("name", name);
 
@@ -80,7 +80,6 @@ public class LoginServlet extends HttpServlet {
 		// リクエストの転送
 		RequestDispatcher rd = request.getRequestDispatcher(url);
 		rd.forward(request, response);
-		
 
 	}
 

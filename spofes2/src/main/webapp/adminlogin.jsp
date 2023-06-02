@@ -24,7 +24,13 @@
 				<div id="s3">パスワード</div><br>
 				<div class="s4">
 					<input type="password" placeholder="パスワード（８桁以上）" name="pass">
-				</div><br> 
+				</div><div>
+				<%if(request.getAttribute("err")!=null){%>
+                <%=request.getAttribute("err") %>
+        		<%}else{%>
+        		<br>
+        		<%} %>
+        		</div>
 				<input class="button-panel" type="submit" value="ログイン"><br>
 			</form>
 		</div>
