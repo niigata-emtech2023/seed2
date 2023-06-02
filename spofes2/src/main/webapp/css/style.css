@@ -80,5 +80,6 @@ input[type="password"]{
 	font-family:Comic Sans MS;
 }
 .err{
-	z-index:10000
+	font-size:150%;
+	color:red;
 }

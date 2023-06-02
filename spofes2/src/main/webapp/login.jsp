@@ -26,7 +26,7 @@
 				<div class="s4">
 					<input id="pass" type="password" placeholder="パスワード（８桁以上）" name="pass">
 				</div>
-				<div>
+				<div class="err">
 				<%if(request.getAttribute("err")!=null){%>
                 <%=request.getAttribute("err") %>
         		<%}else{%>

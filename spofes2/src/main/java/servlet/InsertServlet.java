@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -43,6 +42,7 @@ public class InsertServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		String url=null;
 		// リクエストオブジェクトのエンコーディング方式の指定
 		request.setCharacterEncoding("UTF-8");
 
@@ -59,10 +59,10 @@ public class InsertServlet extends HttpServlet {
 		int number = 0; //処理件数
 
 		try {
-			// DAOの利用
-			number = dao.insert(spofes,taskList.size());
-		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
+				number = dao.insert(spofes,taskList.size());
+
+		} catch (Exception e) {
+			
 		}
 
 		// リクエストスコープへの属性の設定

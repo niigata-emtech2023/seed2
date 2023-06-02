@@ -24,7 +24,7 @@ table {
 
 
 table td {/*table内のtdに対して*/
-  	padding: 10px 60px;/*上下10pxで左右60px*/
+  	padding: 10px 50px;/*上下10pxで左右60px*/
   	font-size:150%
   	 
 }

@@ -1,92 +1,138 @@
 @charset "UTF-8";
-span{
-	font-size:40px;
-	color:#ffc184;
-	font-family:Comic Sans MS;
+
+span {
+	font-size: 40px;
+	color: #ffc184;
+	font-family: Comic Sans MS;
 	padding-left: 60px;
 	padding-top: 11px;
-	width:20%;
+	width: 20%;
 }
-#name{
-	font-size:30px;
-	width:20%;
+
+#name {
+	font-size: 30px;
+	width: 20%;
 	padding-top: 15px;
-	font-family:Meiryo UI;
-}
-header{
-	display:flex;
-}
-.button-panel{
-	border-color:#ffa500;
-	background-color:#ffa500;
-	font-size:80%;
-	width:150px;
-}
-.rank{
-	width:60%;
-	font-size:20px;
-	font-weight:bold;
+	font-family: Meiryo UI;
 }
 
-.rank td{
-	background:rgba(255,0,0,0);
-	border-color:#fffff0;
+header {
+	display: flex;
 }
-.rank tr{
+
+.button-panel {
+	border-color: #ffa500;
+	background-color: #ffa500;
+	font-size: 80%;
+	width: 150px;
+}
+
+.rank {
+	width: 60%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.rank td {
+	background: rgba(255, 0, 0, 0);
+	border-color: #fffff0;
+}
+
+.rank tr {
+	text-align: center;
+}
+
+.rank1 {
+	width: 100%;
+}
+
+.rank2 {
+	width: 100%;
+}
+
+.td1 {
+	width: 20%;
+}
+
+.td2 {
+	width: 20%;
+}
+
+.td3 {
+	width: 20%;
+}
+
+.td4 {
+	width: 20%;
+}
+
+.td5 {
+	width: 20%;
+}
+
+.td11 {
+	width: 20%;
+}
+
+.td12 {
+	width: 20%;
+}
+
+.td13 {
+	width: 20%;
+}
+
+.td14 {
+	width: 20%;
+}
+
+.td15 {
+	width: 20%;
+}
+
+.userheader {
+	font-size: 30px;
+	padding-top: 50px;
+	width: 60%;
+	display: flex;
+}
+
+.myrank {
+	width: 27%;
+	display: block;
+}
+
+.myteam {
+	width: 38%;
+	display: block;
+}
+
+.slogan {
+	width: 33%;
+	padding:0px -30px;
+	display: block;
 	text-align:center;
-}
-.rank1{
-	width:100%;
-}
-.rank2{
-	width:100%;
-}
-.td1{
-	width:20%;
-}
-.td2{
-	width:20%;
-}
-.td3{
-	width:20%;
-}
-.td4{
-	width:20%;
-}
-.td5{
-	width:20%;
-}
-.td11{
-	width:20%;
-}
-.td12{
-	width:20%;
-}
-.td13{
-	width:20%;
-}
-.td14{
-	width:20%;
-}
-.td15{
-	width:20%;
+	font-family:fantasy;
+	text-shadow:2px 2px 3px black;	
 }
 
-.userheader{
-	font-size:30px;
-	padding-top:50px;
-	width:60%;
-	display:flex;
+.redslo{
+	color:red;
+	
 }
-.myrank{
-	width:33%;
-	display:block;
+
+.bluslo{
+	color:blue;
 }
-.myteam{
-	width:33%;
-	display:block;
+
+.yelslo{
+	color:yellow;
 }
-.mypoint{
-	width:33%;
-	display:block;
+
+.greslo{
+	color:green;
+}
+
+.pinslo{
+	color:pink;
 }
