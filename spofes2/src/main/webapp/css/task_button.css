@@ -2,19 +2,19 @@
 .button-panel1{
 	border-color:#ffa500;
 	background-color:#ffa500;
-	font-size:80%;
-	width:170px;
+	font-size:100%;
+	width:200px;
 }
 .button-panel2{
 	border-color:#ffa500;
 	background-color:#ffa500;
-	font-size:80%;
-	width:250px;
+	font-size:100%;
+	width:400px;
 }
 .button-panel3{
 	border-color:#ffa500;
 	background-color:#ffa500;
-	font-size:80%;
+	font-size:100%;
 	width:150px;
 }
 .button{
@@ -22,7 +22,7 @@
     justify-content:center;
     gap: 20px;/*縦・横で同じ余白*/
     gap: 20px 70px;
-    margin-top:45px;
+    margin-top:60px;
    	font-size:200%;
 	
 }

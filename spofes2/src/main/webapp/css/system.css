@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.system{
+	text-align:center;
+	
+}
+
+#log{
+	font-size: 40px;
+	color: #ffc184;
+	font-family: Comic Sans MS;
+	padding-left: 30px;
+	margin-top:-22px;
+    width: 14.33881%;
+    Position: absolute;
+}

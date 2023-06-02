@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>チェック内容確認画面</title>
+<title>check内容確認画面</title>
 <link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
@@ -15,15 +15,16 @@
 	List<SpoFesBean> taskList = (List<SpoFesBean>) session.getAttribute("taskList");
 
 	%>
+	<%@ include file="system.jsp" %>
 	<div class="topcheck">
-		<div class="topcheckleft">＜チェック欄＞</div>
+		<div class="topcheckleft">＜check欄＞</div>
 		<div class="topcheckcenter">これでよろしいでしょうか</div>
 		<div class="topcheckright">
 			<%=request.getParameter("team_name")%>団
 		</div>
 	</div>
 	<table class="table">
-		<tbody class="tbody2">
+		<tbody class="tbody3">
 			<%
 			int i = 1;
 			for (SpoFesBean bean : taskList) {

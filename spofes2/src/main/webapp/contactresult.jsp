@@ -16,7 +16,7 @@
 	%>
 	<div class="topcheck">
 	<div class="topcheckleft">
-		＜チェック欄＞ 
+		＜check欄＞ 
 	</div>
 	<div class="topcheckcenter">
 		登録しました
@@ -26,7 +26,7 @@
 	</div>
 	</div>
 	<table class="table">
-		<tbody class="tbody2">
+		<tbody class="tbody3">
 		<%
 			for (SpoFesBean bean : taskList) {
 			%>

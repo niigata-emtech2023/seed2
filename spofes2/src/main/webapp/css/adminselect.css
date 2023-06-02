@@ -42,10 +42,9 @@ tbody td{
 	
 }
 .task{
-	text-align:center;
-	background-color:#fff;
+	background-color: #fff;
 	width: 1050px;
-	text-align:left;
+	text-align: left;
 	
 }
 
@@ -63,7 +62,7 @@ tbody td{
 .tbody {
   display: block;
   overflow-y: scroll;
-  height: 505.9px;
+  height: 462px;
   width: 1150px;
   border-collapse:collapse;
   
@@ -72,6 +71,14 @@ tbody td{
 	margin:0px -40px; 
 	border-color:#ffa500;
 	background-color:#ffa500;
+	font-size:80%;
+	width:100px;
+	justify-content:right;
+}
+.dbutton{
+	margin:0px -40px; 
+	border-color:#ffa500;
+	background-color:#f00;
 	font-size:80%;
 	width:100px;
 	justify-content:right;
@@ -90,10 +97,10 @@ tbody td{
 	font-size:200%;
 	width:250px;
 	display: flex;
-	margin-left:470px;
+	margin-left: 470px;
 }
 .topleft{
 	display:block;
 	font-size:300%;
-	margin-left:180px;
+	margin-left: 130px;
 }

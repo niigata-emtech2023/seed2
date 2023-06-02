@@ -24,7 +24,7 @@
 	<td class="kazu">
 		<%=bean.getTaskId()%>
 	</td>
-	<td>
+	<td class="task">
 		<%=bean.getTaskName() %>
 	</td>
 	<td>
@@ -36,7 +36,7 @@
 	</td>
 	<td>
 		<form action="deleteconfirmation.jsp">
-			<input class="tbutton" type="submit"value="削除">
+			<input class="dbutton" type="submit"value="削除">
 			<input type="hidden" name="task" value="<%=bean.getTaskName() %>">
 		</form>
 		

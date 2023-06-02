@@ -4,9 +4,9 @@ span {
 	font-size: 40px;
 	color: #ffc184;
 	font-family: Comic Sans MS;
-	padding-left: 60px;
+	padding-left: 30px;
 	padding-top: 11px;
-	width: 20%;
+    width: 14.33881%;
 }
 
 #name {
@@ -103,7 +103,7 @@ header {
 }
 
 .myteam {
-	width: 38%;
+	width: 50%;
 	display: block;
 }
 

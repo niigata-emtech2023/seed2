@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>チェック画面</title>
+<title>check画面</title>
 <link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
 	List<SpoFesBean> taskList = (List<SpoFesBean>) session.getAttribute("taskList");
 	List<SpoFesBean> teamList = (List<SpoFesBean>) request.getAttribute("teamList");
 	%>
-
+	<%@ include file="system.jsp" %>
 	<div class="top">
 		<form action="select-all-servlet" method="post">
 			<input class="topbutton" type=submit value="メニューに戻る">
