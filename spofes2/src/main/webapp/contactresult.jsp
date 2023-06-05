@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
+	<%@ include file="system.jsp" %>
 	<%
 	request.setCharacterEncoding("UTF-8");
 	List<SpoFesBean> taskList = (List<SpoFesBean>) session.getAttribute("taskList");

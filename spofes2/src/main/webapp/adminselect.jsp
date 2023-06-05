@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="./css/adminselect.css">
 </head>
 <body>
+	<%@ include file="system.jsp" %>
 <div class="top">
 	<div class="topleft">
 		☆得点項目一覧表示

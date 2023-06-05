@@ -8,6 +8,7 @@
 <link rel = "stylesheet" href = "./css/insertconfirmation.css">
 </head>
 <body>
+	<%@ include file="system.jsp" %>
     
     <div id = s1>&lt;新規得点項目登録確認画面&gt;</div>
     <br>

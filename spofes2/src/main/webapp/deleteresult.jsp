@@ -8,6 +8,7 @@
 <link rel = "stylesheet" href = "./css/deleteresult.css">
 </head>
 <body>
+	<%@ include file="system.jsp" %>
     <span id = s1>&lt;得点項目削除完了画面&gt;</span>
     <br><br>
 	<%

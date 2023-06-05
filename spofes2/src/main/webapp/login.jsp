@@ -10,6 +10,7 @@
 <body>
 	<div id="wrapper">
 	<div class="title">
+	体育祭ToDo管理システム<br>
 		『Spofes』を始めよう！
 		</div>
 		<div class="s1">

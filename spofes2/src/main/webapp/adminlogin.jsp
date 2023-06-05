@@ -10,6 +10,7 @@
 <body class="admin">
 	<div id="wrapper">
 	<div class="title">
+	<br>
 		『Spofes』を始めよう！
 		</div>
 		<div class="s1">

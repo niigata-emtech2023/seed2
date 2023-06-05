@@ -8,6 +8,7 @@
 <link rel = "stylesheet" href = "./css/insertresult.css">
 </head>
 <body>
+	<%@ include file="system.jsp" %>
     <span id = s1>&lt;新規得点項目登録完了画面&gt;</span>
     <br><br>
 	<%

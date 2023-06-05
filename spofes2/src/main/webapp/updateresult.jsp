@@ -8,6 +8,7 @@
 <link rel = "stylesheet" href = "./css/update.css">
 </head>
 <body>
+	<%@ include file="system.jsp" %>
 <%
 request.setCharacterEncoding("UTF-8");
 %>

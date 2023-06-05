@@ -76,6 +76,7 @@ input[type="password"]{
 }
 .title{
 	font-size:320%;
+	padding-bottom: 7px;
 	font-style:italic;
 	font-family:Comic Sans MS;
 }
