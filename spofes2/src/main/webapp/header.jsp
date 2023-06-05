@@ -48,9 +48,9 @@
 		<%}else if(teamname.equals("黄雷")){%>
 		<div class=yelslo>電光石火</div>
 		<%}else if(teamname.equals("新緑")){%>
-		<div class=greslo>ニャオハ立つな</div>
+		<div class=greslo>森羅万象</div>
 		<%}else if(teamname.equals("桃姫")){%>
-		<div class=pinslo>桃園結義</div>
+		<div class=pinslo>桃弧棘矢</div>
 		<%} %>
 		</div>
 	</div>
