@@ -41,7 +41,7 @@
 }
 body{
 	margin:0px auto;
-	padding:80px;
+	padding:75px;
 	text-align:center;
 	background-color:#fffff0;
 }
@@ -76,7 +76,14 @@ input[type="password"]{
 }
 .title{
 	font-size:320%;
-	padding-bottom: 7px;
+	padding-bottom: 15px;
+	font-style:italic;
+	font-family:Comic Sans MS;
+	padding-top: 4.6px;
+}
+.title2{
+	font-size:320%;
+	padding-bottom: 15px;
 	font-style:italic;
 	font-family:Comic Sans MS;
 }
